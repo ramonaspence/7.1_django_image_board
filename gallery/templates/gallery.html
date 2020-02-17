@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class='main container-fluid'>
+  <div class='gallery row no-gutters'>
+  <div class = 'imgs col-8 offset-2'>
+{% for painting in pictures %}
+
+  <h3 class='text'>{{ painting.title }}</h3>
+  <h6 class='text'>{{ painting.description }}</h6>
+
+  <img src="{{ painting.image }}" alt="">
+
+
+
+
+
+
+{% endfor %}
+</div>
+</div>
+
+</main>
+{% endblock %}

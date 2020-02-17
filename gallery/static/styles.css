@@ -1,0 +1,38 @@
+* {
+
+  box-sizing: border-box;
+}
+
+img {
+  align-items: stretch;
+  width: 40vmax;
+  height: 50vmax;
+}
+
+body {
+  background: radial-gradient(#E4E4E4, #030303);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.imgs {
+
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  color: white;
+  display: flex;
+  align-self: flex-end;
+}
+
+@media (max-width: 768px) {
+  .text {
+    text-align: center;
+  }
+
+  .imgs {
+
+  }
+}

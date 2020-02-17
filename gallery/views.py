@@ -1,7 +1,17 @@
-from django.http import HttpResponse
+from django.views.generic import TemplateView
+from .models import Painting
 
-def gallery_page_view(request):
-    return HttpResponse('This is the gallery')
+class Gallery(TemplateView):
+    template_name = 'gallery.html'
+
+    def get_context_data(self, **kwargs):
+        pictures = Painting.objects.all()
+
+        context = {
+            'pictures': pictures
+        }
+
+        return context
 
 
 
