@@ -3,13 +3,14 @@
 {% block content %}
 <main class='main container-fluid'>
   <div class='gallery row no-gutters'>
-  <div class = 'imgs col-8 offset-2'>
+  <div class = 'imgs col-8 offset-sm-2 offset-1'>
 {% for painting in pictures %}
 
-  <h3 class='text'>{{ painting.title }}</h3>
-  <h6 class='text'>{{ painting.description }}</h6>
-
+  <h4 class='text'>{{ painting.title }}</h4>
+  <span class='text'>{{ painting.description }}</span>
+  <hr />
   <img src="{{ painting.image }}" alt="">
+  <hr />
 
 
 
