@@ -3,23 +3,24 @@
 {% block content %}
 <main class='main container-fluid'>
   <div class='gallery row no-gutters'>
-  <div class = 'imgs col-8 offset-sm-2 offset-1'>
-{% for painting in pictures %}
+    <div class = 'imgs col-8 offset-sm-2 offset-1'>
 
-  <h4 class='text'>{{ painting.title }}</h4>
-  <span class='text'>{{ painting.description }}</span>
-  <hr />
-  <img src="{{ painting.image }}" alt="">
-  <hr />
+    {% for painting in pictures %}
+{% comment %} 
+      <h4 class='text'>
+        {{ painting.title }}
+      </h4>
+      <span class='text'>
+        {{ painting.description }}
+      </span> {% endcomment %}
+      <hr />
+      <img src="
+        {{ painting.image }}" alt=""
+      >
+      <hr />
 
-
-
-
-
-
-{% endfor %}
-</div>
-</div>
-
+    {% endfor %}
+    </div>
+  </div>
 </main>
 {% endblock %}
